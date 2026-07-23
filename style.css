@@ -368,3 +368,50 @@ opacity:0;
         opacity: 1;
     }
 }
+
+/* Safe Background Glow */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 150, 255, 0.15);
+    border-radius: 50%;
+    filter: blur(100px);
+    top: 10%;
+    left: 10%;
+    z-index: 0;
+    pointer-events: none;
+    animation: glowMove 8s infinite alternate ease-in-out;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    background: rgba(150, 0, 255, 0.12);
+    border-radius: 50%;
+    filter: blur(100px);
+    bottom: 10%;
+    right: 10%;
+    z-index: 0;
+    pointer-events: none;
+    animation: glowMove 10s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes glowMove {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(80px, 50px);
+    }
+}
