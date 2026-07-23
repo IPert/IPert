@@ -1,1 +1,133 @@
-console.log("IPert website is working!");
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+
+body{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.6),
+    rgba(0,0,0,.9)
+    ),
+    url("background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+.container{
+
+    text-align:center;
+
+    padding:40px;
+
+    background:rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    animation:show 1s;
+
+}
+
+
+.profile{
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid white;
+
+}
+
+
+h1{
+
+    margin-top:20px;
+
+    font-size:45px;
+
+}
+
+
+p{
+
+    margin:10px;
+
+    opacity:.7;
+
+}
+
+
+.links a{
+
+    display:block;
+
+    margin:15px;
+
+    padding:15px 50px;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+}
+
+
+.links a:hover{
+
+    transform:scale(1.1);
+
+    background:white;
+
+    color:black;
+
+}
+
+
+@keyframes show{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
