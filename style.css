@@ -243,3 +243,35 @@ background-position:1000px 1000px;
 }
 
 }
+
+.fog{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:200%;
+    height:220px;
+    background:linear-gradient(
+        to top,
+        rgba(255,255,255,.12),
+        transparent
+    );
+    filter:blur(40px);
+    animation:fogMove 35s linear infinite;
+    pointer-events:none;
+}
+
+@keyframes fogMove{
+
+0%{
+transform:translateX(0);
+}
+
+50%{
+transform:translateX(-15%);
+}
+
+100%{
+transform:translateX(0);
+}
+
+}
