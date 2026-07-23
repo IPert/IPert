@@ -448,3 +448,42 @@ body {
         opacity: 0;
     }
 }
+
+/* Full Dark Theme Overlay /
+
+html {
+    background: #000;
+}
+
+body {
+    background: #000 !important;
+}
+
+
+/ More Shooting Stars */
+
+.shooting-star {
+    position: fixed;
+    width: 140px;
+    height: 2px;
+    background: linear-gradient(90deg, white, transparent);
+    transform: rotate(-45deg);
+    opacity: 0.9;
+    z-index: 3;
+    pointer-events: none;
+
+    animation: starMove 1.8s ease-out forwards;
+}
+
+
+@keyframes starMove {
+    from {
+        transform: translate(0, 0) rotate(-45deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-350px, 350px) rotate(-45deg);
+        opacity: 0;
+    }
+}
