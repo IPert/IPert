@@ -526,3 +526,30 @@ body {
     transform: translateY(-5px);
     background: rgba(255,255,255,0.15);
 }
+/* Fix Link Buttons */
+
+a {
+    display: block;
+    width: 250px;
+    padding: 15px;
+    margin: 12px auto;
+
+    text-align: center;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    color: white;
+    text-decoration: none;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+
+a:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.18);
+}
