@@ -47,3 +47,8 @@ scale(${0.5+Math.random()});
 leaves.appendChild(leaf);
 
 }
+
+const leafImages = ["leaf1.png", "leaf2.png"];
+
+leaf.style.backgroundImage =
+url(${leafImages[Math.floor(Math.random()*leafImages.length)]});
