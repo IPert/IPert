@@ -320,3 +320,51 @@ opacity:0;
 }
 
 }
+
+/* Leaves Effect /
+.leaf {
+    position: fixed;
+    top: -100px;
+    z-index: 5;
+    pointer-events: none;
+    animation: leafFall linear infinite;
+}
+
+@keyframes leafFall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/ Stars Effect */
+.star {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+
+    animation: floatStar 5s infinite ease-in-out;
+}
+
+@keyframes floatStar {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translateY(-30px) scale(1.5);
+        opacity: 1;
+    }
+}
