@@ -415,3 +415,36 @@ body::after {
         transform: translate(80px, 50px);
     }
 }
+
+/* Dark Background /
+body {
+    background: #030303;
+}
+
+
+/ Shooting Stars */
+.shooting-star {
+    position: fixed;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, white, transparent);
+    transform: rotate(-45deg);
+    opacity: 0.8;
+    z-index: 3;
+    pointer-events: none;
+
+    animation: starMove 1.5s ease-out forwards;
+}
+
+
+@keyframes starMove {
+    from {
+        transform: translate(0, 0) rotate(-45deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-250px, 250px) rotate(-45deg);
+        opacity: 0;
+    }
+}
