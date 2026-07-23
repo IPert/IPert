@@ -7,6 +7,62 @@
 </head>
 
 <body>
+
+   <div class="leaves">
+    <img src="leaf1.png" class="leaf leaf1">
+    <img src="leaf2.png" class="leaf leaf2">
+</div>
+
+    <div class="leaves">
+    <img src="leaf1.png" class="leaf leaf1">
+    <img src="leaf2.png" class="leaf leaf2">
+</div>
+<!-- Leaves -->
+<div class="leaves"></div>
+
+<script>
+const leaves = document.querySelector(".leaves");
+
+for (let i = 0; i < 20; i++) {
+    let leaf = document.createElement("img");
+
+    leaf.src = i % 2 === 0 ? "leaf1.png" : "leaf2.png";
+    leaf.className = "leaf";
+
+    leaf.style.left = Math.random() * 100 + "vw";
+    leaf.style.animationDuration = (5 + Math.random() * 8) + "s";
+    leaf.style.animationDelay = Math.random() * 5 + "s";
+    leaf.style.width = (30 + Math.random() * 40) + "px";
+
+    leaves.appendChild(leaf);
+}
+</script>
+
+
+<!-- Floating Stars -->
+<div class="particles"></div>
+
+<script>
+const particles = document.querySelector(".particles");
+
+for (let i = 0; i < 40; i++) {
+    let star = document.createElement("span");
+
+    star.className = "star";
+
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
+    star.style.animationDuration = (3 + Math.random() * 5) + "s";
+    star.style.animationDelay = Math.random() * 5 + "s";
+
+    particles.appendChild(star);
+}
+</script>
+
+
+</body>
+</html>
+
 <div class="fog"></div>
 <div class="stars"></div>
 <div id="leaves"></div>
