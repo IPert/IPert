@@ -52,3 +52,18 @@ document.body.addEventListener("click", () => {
     rain.play();
 }, { once: true });
 </script>
+
+<audio id="clickSound" preload="auto">
+    <source src="click.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const clickSound = document.getElementById("clickSound");
+
+document.querySelectorAll("a, button").forEach(item => {
+    item.addEventListener("click", () => {
+        clickSound.currentTime = 0;
+        clickSound.play();
+    });
+});
+</script>
